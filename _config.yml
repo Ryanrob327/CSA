@@ -1,12 +1,9 @@
-# Jekyll! config for blog
-# YAML cheet sheet  https://learntheweb.courses/topics/markdown-yaml-cheat-sheet/#yaml
-
 # settings for blog
 title: Ryan's APCSA blog
 description: "a wonderful blog for a wonderful person"
 owner_name: Ryan McWeeny
 github_username: ryanrob327
-baseurl: "/Ryan"
+baseurl: "/CSA"
 future: true
 
 # theme requirements
