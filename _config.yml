@@ -1,14 +1,20 @@
-title: CompSci Blogs
-description: "August 2023 to June 2024"
+# Jekyll! config for blog
+# YAML cheet sheet  https://learntheweb.courses/topics/markdown-yaml-cheat-sheet/#yaml
+
+# settings for blog
+title: Ryan's APCSA blog
+description: "a wonderful blog for a wonderful person"
 owner_name: Ryan McWeeny
-github_username: Ryanrob327
-baseurl: "/student"
-#remote_theme: pages-themes/midnight@v0.2.0
+github_username: ryanrob327
+baseurl: "/Ryan"
+future: true
+
+# theme requirements
+remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
-remote_theme: pages-themes/minimal@v0.2.0
+# remote_theme: pages-themes/minimal@v0.2.0
 # remote_theme: pages-themes/hacker@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
 - jekyll-remote-theme
-future: true
