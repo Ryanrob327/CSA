@@ -2,10 +2,21 @@
 layout: default
 title: Student Blog
 ---
-# Ryan McWeeny's CSA blog
 
-![]({{ site.baseurl }}/images/menu_img.png)
+<style>
+div{
+    margin: 15%;
+}
+</style>
 
-Read my about me: [here!](https://ryanrob327.github.io/CSA/about)
+<html>
+<div>
+    <h1>Ryan McWeeny's CSA blog</h1>
 
-Also, view my github repositories: [here!](https://github.com/Ryanrob327?tab=repositories)
+    <img src="{{ site.baseurl }}/images/menu_img.png">
+
+    <p>Read my about me: </p><a href="https://ryanrob327.github.io/CSA/about">here!</a>
+
+    <p>Also, view my github repositories: </p><a href="https://github.com/Ryanrob327?tab=repositories">here!</a>
+</div>
+</html>
