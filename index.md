@@ -2,7 +2,6 @@
 layout: default
 title: Student Blog
 ---
-
 # Ryan McWeeny's CSA blog
 
 ![]({{ site.baseurl }}/images/menu_img.png)
