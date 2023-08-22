@@ -3,12 +3,6 @@ layout: default
 title: Student Blog
 ---
 
-<style>
-div{
-    margin: 15%;
-}
-</style>
-
 <html>
 <div>
     <h1>Ryan McWeeny's CSA blog</h1>
