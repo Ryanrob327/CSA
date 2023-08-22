@@ -1,13 +1,33 @@
-<header class="site-header">
+<style>
+* {
+  margin: 0; padding: 0; box-sizing: border-box; /* reset */
+}
+html, body {
+    width: 100%; /* specify width on parent */
+}
+.container {
+    width: 100%
+}
+button {
+  margin-top: 16px;
+    width: 19%; /* make the children equal */
+    height: 32px;
+    background-color: #d5000d;
+}
+a {
+    color: white
+}
+</style>
 
-  <div id="header">
+<header class="site-header">
+  <div id="header" class="header">
     <nav>
-      <ul>
-        <li class="fork"><a href="{{site.baseurl}}/">Home</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/blogs">Blogs</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/schedule">Schedule</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/about">About</a></li>
-        <li class="title"><a href="{{ site.github.repository_url }}#readme">View On GitHub</a></li>
+      <ul class="horizontal-menu">
+        <button class="button"><a href="{{site.baseurl}}/">Home</a></button>
+        <button class="button"><a href="{{site.baseurl}}/blogs">Blogs</a></button>
+        <button class="button"><a href="{{site.baseurl}}/schedule">Schedule</a></button>
+        <button class="button"><a href="{{site.baseurl}}/about">About</a></button>
+        <button class="button"><a href="{{ site.github.repository_url }}#readme">View On GitHub</a></button>
       </ul>
     </nav>
   </div><!-- end header -->
