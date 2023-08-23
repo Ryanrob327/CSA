@@ -15,4 +15,4 @@ My blog setup was relatively easy, I got my site up and deployed without any hic
 
 ## Java
 
-Creating the Java jupyter notebook was also simple because I already know java pretty well from robotics. The only thing I have trouble with is installing the Java kernel for jupyter notebook, I have tried installing IJava and Beakerx.
+Creating the Java jupyter notebook was also simple because I already know java pretty well from robotics. The only thing I have trouble with is installing the Java kernel for jupyter notebook, I didn't see the directions to install it and failed for a while trying to install the beakerx java kernel off of the internet
