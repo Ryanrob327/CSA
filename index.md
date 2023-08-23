@@ -9,8 +9,8 @@ title: Student Blog
 
     <img src="{{ site.baseurl }}/images/menu_img.png">
 
-    <p>Read my about me: </p><a href="https://ryanrob327.github.io/CSA/about">here!</a>
+    <p>Read my about me: <a href="https://ryanrob327.github.io/CSA/about">here!</a></p>
 
-    <p>Also, view my github repositories: </p><a href="https://github.com/Ryanrob327?tab=repositories">here!</a>
+    <p>Also, view my github repositories: <a href="https://github.com/Ryanrob327?tab=repositories">here!</a></p>
 </div>
 </html>
