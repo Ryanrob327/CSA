@@ -7,7 +7,7 @@ title: Student Blog
 <div>
     <h1>Ryan McWeeny's CSA blog</h1>
 
-    <img src="{{ site.baseurl }}/images/menu_img.png">
+    <img src="{{ site.baseurl }}/images/menu_img.png" style="">
 
     <p>Read my about me: <a href="https://ryanrob327.github.io/CSA/about">here!</a></p>
 
