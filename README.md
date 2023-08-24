@@ -121,3 +121,8 @@ bundle install
     ```bash
     make convert
     ```
+
+- If the 'make' command does not work use 'bundle exec jekyll serve'
+```bash
+bundle exec jekyll serve
+```
