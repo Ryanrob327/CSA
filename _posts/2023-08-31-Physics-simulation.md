@@ -1,6 +1,6 @@
 ---
-toc: true
-comments: true
+toc: false
+comments: false
 layout: post
 title: Physics simulation
 description: A simple bouncing ball simulation with inputs to change variables
