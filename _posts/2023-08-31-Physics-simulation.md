@@ -50,7 +50,7 @@ type: hacks
             x: canvas.width / 2,
             y: canvas.height / 2,
             radius: 20,
-            color: '#3498db',
+            color: '#d5000d',
             velocityX: 0, // Initial value will be set by user input
             velocityY: 0, // Initial value will be set by user input
             gravity: 0.1,
