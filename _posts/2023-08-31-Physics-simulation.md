@@ -3,7 +3,6 @@ toc: false
 comments: false
 layout: post
 title: Physics simulation
-description: A simple bouncing ball simulation with inputs to change variables
 courses: { calendar: {week: 2} }
 type: hacks
 ---
@@ -25,6 +24,7 @@ type: hacks
         }
         button {
             margin-top: 20px;
+            margin-bottom: 50px;
         }
     </style>
 </head>
