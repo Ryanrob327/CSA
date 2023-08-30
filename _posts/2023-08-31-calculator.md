@@ -3,8 +3,6 @@ toc: true
 comments: false
 layout: post
 title: calculator
-courses: { calendar: {week: 2} }
-type: hacks
 ---
 <!-- 
 Hack 0: Right justify result
