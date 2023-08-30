@@ -5,19 +5,16 @@ layout: post
 title: Stocks data
 courses: { calendar: {week: 2} }
 type: hacks
----
+--- 
 
-
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Stock Data Table and Chart</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Stock Data Table</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <h1>Stock Data Table and Chart</h1>
-    
-    <h2>Stock Data Table</h2>
+    <a>*Data may take a moment to load</a>
+    <h1>Stock Data Table</h1>
     <table id="stockTable">
         <thead>
             <tr>
@@ -34,13 +31,13 @@ type: hacks
             <!-- Stock data will be populated here -->
         </tbody>
     </table>
-    
-    <h2>Stock Price Chart</h2>
-    <canvas id="stockChart" width="400" height="200"></canvas>
+
+    <h1>Stock Chart</h1>
+    <div id="chart"></div>
 
     <script>
         const apiKey = 'I7RX9CDHLG7AROX8';
-        const symbol = 'AAPL'; // Replace with the desired stock symbol
+        const symbol = 'AAPL'; 
 
         const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
 
@@ -87,62 +84,42 @@ type: hacks
                         stockTableBody.appendChild(row);
                     }
                 }
-
-                const labels = [];
-                const openPrices = [];
-
-                for (const date in stockData) {
-                    if (stockData.hasOwnProperty(date)) {
-                        labels.push(date);
-                        openPrices.push(parseFloat(stockData[date]['1. open']));
-                    }
-                }
-
-                const ctx = document.getElementById('stockChart').getContext('2d');
-                const stockChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            label: 'Opening Prices',
-                            data: openPrices,
-                            borderColor: 'blue',
-                            fill: false,
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            x: {
-                                type: 'time',
-                                time: {
-                                    unit: 'day',
-                                    displayFormats: {
-                                        day: 'MMM D'
-                                    },
-                                },
-                                title: {
-                                    display: true,
-                                    text: 'Date'
-                                }
-                            },
-                            y: {
-                                title: {
-                                    display: true,
-                                    text: 'Open Price'
-                                }
-                            }
-                        }
-                    }
-                });
             })
             .catch(error => {
                 console.error('Error fetching stock data:', error);
             });
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const dates = Object.keys(data['Time Series (Daily)']).reverse();
+                const prices = dates.map(date => parseFloat(data['Time Series (Daily)'][date]['4. close']));
+                
+                const trace = {
+                    x: dates,
+                    y: prices,
+                    type: 'scatter',
+                    mode: 'lines',
+                    name: 'AAPL Stock Price'
+                };
+                
+                const layout = {
+                    title: 'AAPL Stock Price',
+                    xaxis: {
+                        title: 'Date'
+                    },
+                    yaxis: {
+                        title: 'Price (USD)'
+                    }
+                };
+                
+                const config = {
+                    responsive: true
+                };
+                
+                Plotly.newPlot('chart', [trace], layout, config);
+            })
+            .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
 </html>
-
-
-
