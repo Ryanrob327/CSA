@@ -8,13 +8,16 @@ type: hacks
 ---
 
 
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Stock Data Table</title>
+    <title>Stock Data Table and Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Stock Data Table</h1>
+    <h1>Stock Data Table and Chart</h1>
+    
+    <h2>Stock Data Table</h2>
     <table id="stockTable">
         <thead>
             <tr>
@@ -31,8 +34,9 @@ type: hacks
             <!-- Stock data will be populated here -->
         </tbody>
     </table>
+    
+    <h2>Stock Price Chart</h2>
     <canvas id="stockChart" width="400" height="200"></canvas>
-
 
     <script>
         const apiKey = 'I7RX9CDHLG7AROX8';
@@ -83,65 +87,62 @@ type: hacks
                         stockTableBody.appendChild(row);
                     }
                 }
+
+                const labels = [];
+                const openPrices = [];
+
+                for (const date in stockData) {
+                    if (stockData.hasOwnProperty(date)) {
+                        labels.push(date);
+                        openPrices.push(parseFloat(stockData[date]['1. open']));
+                    }
+                }
+
+                const ctx = document.getElementById('stockChart').getContext('2d');
+                const stockChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Opening Prices',
+                            data: openPrices,
+                            borderColor: 'blue',
+                            fill: false,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                type: 'time',
+                                time: {
+                                    unit: 'day',
+                                    displayFormats: {
+                                        day: 'MMM D'
+                                    },
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Date'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Open Price'
+                                }
+                            }
+                        }
+                    }
+                });
             })
             .catch(error => {
                 console.error('Error fetching stock data:', error);
             });
-
-            
-
-    // Graph script
-
-    const labels = []; // Array to hold the dates
-    const openPrices = []; // Array to hold the opening prices
-
-    for (const date in stockData) {
-        if (stockData.hasOwnProperty(date)) {
-            labels.push(date);
-            openPrices.push(parseFloat(stockData[date]['1. open']));
-        }
-    }
-
-    const ctx = document.getElementById('stockChart').getContext('2d');
-    const stockChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Opening Prices',
-                data: openPrices,
-                borderColor: 'blue',
-                fill: false,
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    type: 'time',
-                    time: {
-                        unit: 'day',
-                        displayFormats: {
-                            day: 'MMM D'
-                        },
-                    },
-                    title: {
-                        display: true,
-                        text: 'Date'
-                    }
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Open Price'
-                    }
-                }
-            }
-        }
-    });
     </script>
 </body>
 </html>
+
 
 
