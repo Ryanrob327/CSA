@@ -24,7 +24,6 @@ title: Student Blog
         <img src="{{ site.baseurl }}/images/menu_img.png" style="">
 
         <p>Read my about me: <a href="https://ryanrob327.github.io/CSA/about">here!</a></p>
-
         <p>Also, view my GitHub repositories: <a href="https://github.com/Ryanrob327?tab=repositories">here!</a></p>
     </div>
 </body>
