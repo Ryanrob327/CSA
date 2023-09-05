@@ -3,7 +3,7 @@ toc: true
 comments: true
 layout: post
 title: Stocks data
-courses: { calendar: {week: 2} }
+courses: { calendar: {week: 3} }
 type: hacks
 --- 
 
@@ -37,7 +37,7 @@ type: hacks
 
     <script>
         const apiKey = 'I7RX9CDHLG7AROX8';
-        const symbol = 'AAPL'; 
+        const symbol = 'GME'; 
 
         const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
 
@@ -100,11 +100,11 @@ type: hacks
                     y: prices,
                     type: 'scatter',
                     mode: 'lines',
-                    name: 'AAPL Stock Price'
+                    name: 'Stock Price'
                 };
                 
                 const layout = {
-                    title: 'AAPL Stock Price',
+                    title: symbol + ' Stock Price',
                     xaxis: {
                         title: 'Date'
                     },
