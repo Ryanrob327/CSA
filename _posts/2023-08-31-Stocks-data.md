@@ -139,13 +139,10 @@ type: hacks
             $("#stockTable").find("tr:gt(0)").remove();
         }
 
-        fetchStockData(symbol);
-
         document.getElementById('stockSelect').addEventListener('change', function() {
             deleteTable();
             symbol = this.value;
             fetchStockData(symbol);
-            console.log(symbol)
         });
     </script>
 </body>
