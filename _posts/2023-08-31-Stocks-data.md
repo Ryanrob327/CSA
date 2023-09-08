@@ -1,6 +1,6 @@
 ---
-toc: true
-comments: true
+toc: false
+comments: false
 layout: post
 title: Stocks data
 courses: { calendar: {week: 3} }
@@ -26,6 +26,10 @@ type: hacks
         <option value="^SPX">^SPX</option>
     </select>
     <a>*Data may take a moment to load</a>
+    <div id="loading" style="display: none;">
+        <img src="loading-spinner.gif" alt="Loading..." />
+        <p>Loading data...</p>
+    </div>
     <h1>Stock Data Table</h1>
     <table id="stockTable">
         <thead>
