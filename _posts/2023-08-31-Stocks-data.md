@@ -49,7 +49,7 @@ type: hacks
 
     <script>
         const apiKey = 'I7RX9CDHLG7AROX8';
-        symbol = document.getElementById('stockSelect').value; 
+        var symbol = document.getElementById('stockSelect').value; 
 
         const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
 
