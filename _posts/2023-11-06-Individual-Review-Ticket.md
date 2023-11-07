@@ -42,6 +42,7 @@ human.setClassCode(classCode);
 repository.save(human);
 return new ResponseEntity<>(email +" created successfully", HttpStatus.CREATED);
 ```
+
 Javascript on the frontend:
 ```javascript
 document.getElementById('signInForm').addEventListener('submit', function(event) {
@@ -83,10 +84,15 @@ document.getElementById('signInForm').addEventListener('submit', function(event)
 ## Insights
 
 Backend:
+
 ![Image]({{site.baseurl}}/images/CJ-backend-insights.png)
+
 Frontend:
+
 ![Image]({{site.baseurl}}/images/Cj-frontend-insights.png)
+
 Blog:
+
 ![Image]({{site.baseurl}}/images/CSA-insights.png)
 
 # individual blog
@@ -94,3 +100,7 @@ Blog:
 ## College board exam
 
 ![Image]({{site.baseurl}}/images/Tri-1-CSA-MC.png)
+
+## Reflection
+
+Working with java was a very unique experience compared to what I am used to with python. The structure of the language was initially the most off-putting, because I am not used to a completely object oriented method of programming. Usually with Python, I blend objected oriented and functional programming to make a more effective script. Otherwise, I learned a lot about storing information locally for websites to fetch. And it was a wonderful experience working with my group to accomplish a shared goal in building a functional website for requesting and playing music.
