@@ -97,6 +97,19 @@ Blog:
 
 # individual blog
 
+## Unit grades
+
+1. 0.9
+2. 0.95
+3. n/a
+4. n/a
+5. 0.8
+6. 0.9
+7. 0.95
+8. 0.9
+9. 0.88
+10. not done
+
 ## College board exam
 
 ![Image]({{site.baseurl}}/images/Tri-1-CSA-MC.png)
