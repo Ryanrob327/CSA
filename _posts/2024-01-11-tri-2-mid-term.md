@@ -12,12 +12,13 @@ type: reflection
 (The beginning of the year shows less commits than were made because my blog repository was forked and not created from a template)
 
 [schedule](https://ryanrob327.github.io/CSA/schedule)
+[lesson part 2 hacks](https://ryanrob327.github.io/CSA//2024/01/08/lessons-part-2-hacks.html)
 
 
 # College board prep
 
 - [2015 MCQ](https://ryanrob327.github.io/CSA//2023/12/21/2015-Practice-Exam-MCQ.html)
-- [Q35 blog]()
+- [Q35 blog](https://ryanrob327.github.io/CSA//2024/01/11/Q35-blog_IPYNB_2_.html)
 
 
 # Project + key assets
