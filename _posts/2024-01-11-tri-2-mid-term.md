@@ -11,8 +11,8 @@ type: reflection
 [commits](https://github.com/Ryanrob327)
 (The beginning of the year shows less commits than were made because my blog repository was forked and not created from a template)
 
-[schedule](https://ryanrob327.github.io/CSA/schedule)
-[lesson part 2 hacks](https://ryanrob327.github.io/CSA//2024/01/08/lessons-part-2-hacks.html)
+- [schedule](https://ryanrob327.github.io/CSA/schedule)
+- [lesson part 2 hacks](https://ryanrob327.github.io/CSA//2024/01/08/lessons-part-2-hacks.html)
 
 
 # College board prep
